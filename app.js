@@ -6,6 +6,7 @@ const para = document.getElementById("para");
 const lastPara = document.getElementById("last-para");
 const randomNumber = Math.floor(Math.random() * 100 + 1);
 
+
 console.log("Hey, why are you cheating???");
 console.log(`The answer is ${randomNumber - 1} + 1 btw..`);
 
@@ -19,7 +20,8 @@ function eyyup () {
             if (input.value < randomNumber) {
                 para.innerText = `Your guess is ${input.value} which was too low. Please guess a greater number.`
                 chance.innerText -= 1
-                input.value= null
+                input.value= null;
+
                 if (chance.innerText == 0) {
                     para.innerText = "Sorry! You don't have any chances. You can try again."
                     document.querySelector("body").style.backgroundColor = "tomato";
@@ -34,7 +36,8 @@ function eyyup () {
             else if (input.value > randomNumber) {
                 para.innerText = `Your guess is ${input.value} which was too high. Please guess a lower number.`
                 chance.innerText -= 1
-                input.value = null
+                input.value = null;
+
                 if (chance.innerText == 0) {
                     para.innerText = "Sorry! You don't have any chances. You can try again."
                     document.querySelector("body").style.backgroundColor = "tomato";
@@ -61,7 +64,7 @@ function eyyup () {
     
         else {
             para.innerText = "Please enter a number between 1 to 100!"
-            input.value = null
+            input.value = null;
         }
     }
 
